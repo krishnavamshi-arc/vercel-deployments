@@ -1,0 +1,11 @@
+streamlit
+PyPDF2
+sentence-transformers
+faiss-cpu
+torch
+numpy
+langchain
+os
+re
+json
+requests
