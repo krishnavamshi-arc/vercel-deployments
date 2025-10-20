@@ -5,12 +5,10 @@
   </head>
   <body>
     <h2>Answer</h2>
-    <p><strong>{{ answer }}</strong></p>
 
-    <h3>Retrieved Context</h3>
-    {% for c in contexts %}
-    <p>{{ c }}</p>
-    <hr />
-    {% endfor %}
+    <p><strong>Question:</strong> {{ question }}</p>
+    <p><strong>Answer:</strong> {{ answer }}</p>
+
+    <a href="/">🔙 Ask Another Question</a>
   </body>
 </html>
