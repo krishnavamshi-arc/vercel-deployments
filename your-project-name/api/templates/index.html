@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PDF Q&A</title>
+    <title>PDF Q&A with Gemini API</title>
   </head>
   <body>
-    <h2>Upload PDF Manual</h2>
-    <form action="/" method="post" enctype="multipart/form-data">
+    <h2>📘 Ask Questions from Your PDF</h2>
+
+    {% if error %}
+    <p style="color: red">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+      <label>Upload PDF:</label><br />
+      <input type="file" name="pdf" required /><br /><br />
+
+      <label>Your Question:</label><br />
+      <input type="text" name="question" size="80" required /><br /><br />
+
       <label>Google API Key:</label><br />
-      <input type="text" name="api_key" required /><br /><br />
-      <input type="file" name="pdf" accept=".pdf" required /><br /><br />
-      <button type="submit">Upload</button>
+      <input type="password" name="api_key" size="80" required /><br /><br />
+
+      <button type="submit">Ask</button>
     </form>
   </body>
 </html>
