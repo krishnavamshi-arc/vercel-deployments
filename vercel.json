@@ -1,8 +1,10 @@
 {
-  builds [
-    { src app.py, use @vercelpython }
-  ],
-  routes [
-    { src (.), dest app.py }
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.12"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "api/index.py" }
   ]
 }
