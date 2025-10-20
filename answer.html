@@ -5,12 +5,12 @@
   </head>
   <body>
     <h2>Answer</h2>
-    <p>{{ answer }}</p>
+    <p><strong>{{ answer }}</strong></p>
 
-    <h3>Retrieved Contexts</h3>
+    <h3>Retrieved Context</h3>
     {% for c in contexts %}
-    <p><strong>Chunk {{ loop.index }}:</strong> {{ c[:400] }}...</p>
+    <p>{{ c }}</p>
+    <hr />
     {% endfor %}
-    <a href="/">Upload New PDF</a>
   </body>
 </html>
